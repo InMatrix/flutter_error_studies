@@ -1,3 +1,5 @@
+// Example from https://stackoverflow.com/questions/41727553/
+
 import 'package:flutter/material.dart';
 
 class TextClippingError extends StatelessWidget {
