@@ -5,8 +5,10 @@ class MissingMaterialError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Missing Material',
       home: new ExampleWidget(),
+      // The line below can resolve the error.
+      // home: Scaffold(body: new ExampleWidget()),
     );
   }
 }
