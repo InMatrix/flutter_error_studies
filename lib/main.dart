@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_error_studies/missing_material_error.dart';
 import 'package:flutter_error_studies/renderflex_overflow_error.dart';
+import 'package:flutter_error_studies/scaffold_context_error.dart';
 
 void main() => runApp(MyApp());
 
@@ -49,7 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 "RenderFlex Overflow",
                 TextClippingError(),
-              )
+              ),
+              makeDemoEntry(
+                context,
+                "Scaffold Context",
+                ScaffoldContextError(),
+              ),
             ],
           ),
         ),
