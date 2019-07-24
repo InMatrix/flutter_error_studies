@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_error_studies/missing_material_error.dart';
 import 'package:flutter_error_studies/renderflex_overflow_error.dart';
 import 'package:flutter_error_studies/scaffold_context_error.dart';
+import 'package:flutter_error_studies/thrown_exception_error.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,6 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 "Scaffold Context",
                 ScaffoldContextError(),
+              ),
+              makeDemoEntry(
+                context,
+                "Thrown Exception",
+                IThrowExceptionsWidget(),
               ),
             ],
           ),
