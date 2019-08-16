@@ -12,6 +12,9 @@ class UnboundedViewportError extends StatelessWidget {
         appBar: AppBar(title: Text('Unbounded Viewport Error'),),
         body: Column(
           children: <Widget>[
+            Text("Hello, world!"),
+            // Resolution: wrap GridSearch inside an Expanded widget or
+            // a widget with a fixed height such as a Container.
             GridSearch(),
           ],
         ),
