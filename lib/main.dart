@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_error_studies/missing_material_error.dart';
 import 'package:flutter_error_studies/renderflex_overflow_error.dart';
+import 'package:flutter_error_studies/renderflex_overflow_error2.dart';
 import 'package:flutter_error_studies/scaffold_context_error.dart';
 import 'package:flutter_error_studies/thrown_exception_error.dart';
 import 'package:flutter_error_studies/unbounded_viewport_error.dart';
@@ -52,6 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 "RenderFlex Overflow",
                 TextClippingError(),
+              ),
+              makeDemoEntry(
+                context,
+                "RenderFlex Overflow 2",
+                ColumnOverflow(),
               ),
               makeDemoEntry(
                 context,
