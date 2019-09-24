@@ -28,10 +28,6 @@ class ColumnOverflow extends StatelessWidget {
               ),
             ],
           ),
-          decoration: new BoxDecoration(
-            color: Colors.grey[300],
-          ),
-          width: 400.0,
         ),
       ),
     );
