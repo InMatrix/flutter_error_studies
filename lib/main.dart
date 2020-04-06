@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Errors Demo'),
     );
   }
 }
@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Missing Material",
                 MissingMaterialError(),
               ),
+              Divider(),
               makeDemoEntry(
                 context,
                 "RenderFlex Overflow",
@@ -61,6 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               makeDemoEntry(
                 context,
+                "Unbounded Viewport",
+                UnboundedViewportError(),
+              ),
+              Divider(),
+              makeDemoEntry(
+                context,
                 "Scaffold Context",
                 ScaffoldContextError(),
               ),
@@ -69,11 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Thrown Exception",
                 IThrowExceptionsWidget(),
               ),
-              makeDemoEntry(
-                context,
-                "Unbounded Viewport",
-                UnboundedViewportError(),
-              ),
+
             ],
           ),
         ),
@@ -88,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         SizedBox(
           width: 50.0,
         ),
-        Icon(Icons.star),
+        Icon(Icons.warning),
         FlatButton(
           child: Text(title),
           onPressed: () {
