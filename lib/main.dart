@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
         SizedBox(
           width: 50.0,
         ),
-        Icon(Icons.star),
+        Icon(Icons.error),
         FlatButton(
           child: Text(title),
           onPressed: () {
