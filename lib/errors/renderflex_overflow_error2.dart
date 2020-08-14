@@ -17,7 +17,7 @@ class ColumnOverflow extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Title", style: Theme.of(context).textTheme.display1),
+                  Text("Title", style: Theme.of(context).textTheme.headline4),
                   Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed"
                       " do eiusmod tempor incididunt ut labore et dolore magna "
