@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_error_studies/missing_material_error.dart';
-import 'package:flutter_error_studies/renderflex_overflow_error.dart';
-import 'package:flutter_error_studies/renderflex_overflow_error2.dart';
-import 'package:flutter_error_studies/scaffold_context_error.dart';
+import 'package:flutter_error_studies/errors/missing_material_error.dart';
+import 'package:flutter_error_studies/errors/renderflex_overflow_error.dart';
+import 'package:flutter_error_studies/errors/renderflex_overflow_error2.dart';
+import 'package:flutter_error_studies/errors/scaffold_context_error.dart';
 import 'package:flutter_error_studies/errors/setstate_called_during_build_error.dart';
-import 'package:flutter_error_studies/thrown_exception_error.dart';
-import 'package:flutter_error_studies/unbounded_viewport_error.dart';
+import 'package:flutter_error_studies/errors/thrown_exception_error.dart';
+import 'package:flutter_error_studies/errors/unbounded_viewport_error.dart';
 
 import 'fixes/setstate_called_during_build_fix.dart';
 
