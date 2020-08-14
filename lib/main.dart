@@ -3,8 +3,11 @@ import 'package:flutter_error_studies/missing_material_error.dart';
 import 'package:flutter_error_studies/renderflex_overflow_error.dart';
 import 'package:flutter_error_studies/renderflex_overflow_error2.dart';
 import 'package:flutter_error_studies/scaffold_context_error.dart';
+import 'package:flutter_error_studies/errors/setstate_called_during_build_error.dart';
 import 'package:flutter_error_studies/thrown_exception_error.dart';
 import 'package:flutter_error_studies/unbounded_viewport_error.dart';
+
+import 'fixes/setstate_called_during_build_fix.dart';
 
 void main() => runApp(MyApp());
 
@@ -76,7 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Thrown Exception",
                 IThrowExceptionsWidget(),
               ),
-
+              Divider(),
+              makeDemoEntry(
+                context,
+                'setState called during build',
+                SetStateCalledDuringBuildError(),
+                SetStateCalledDuringBuildFix(),
+              )
             ],
           ),
         ),
@@ -84,7 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget makeDemoEntry(BuildContext context, String title, Widget nextScreen) {
+  Widget makeDemoEntry(BuildContext context, String title, Widget errorDemo,
+      [Widget fixDemo]) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
@@ -97,10 +107,20 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => nextScreen),
+              MaterialPageRoute(builder: (context) => errorDemo),
             );
           },
         ),
+        if (fixDemo != null)
+          FlatButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => fixDemo),
+              );
+            },
+            child: Text('Fix'),
+          ),
       ],
     );
   }
