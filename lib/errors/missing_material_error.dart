@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MissingMaterialError extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -13,7 +12,6 @@ class MissingMaterialError extends StatelessWidget {
   }
 }
 
-/// Opens an [AlertDialog] showing what the user typed.
 class ExampleWidget extends StatefulWidget {
   ExampleWidget({Key key}) : super(key: key);
 
@@ -21,7 +19,6 @@ class ExampleWidget extends StatefulWidget {
   _ExampleWidgetState createState() => new _ExampleWidgetState();
 }
 
-/// State for [ExampleWidget] widgets.
 class _ExampleWidgetState extends State<ExampleWidget> {
   final TextEditingController _controller = new TextEditingController();
 
@@ -57,3 +54,5 @@ class _ExampleWidgetState extends State<ExampleWidget> {
     );
   }
 }
+
+void main() => runApp(MissingMaterialError());

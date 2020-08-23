@@ -6,3 +6,5 @@ class IThrowExceptionsWidget extends StatelessWidget {
     throw Exception('not today');
   }
 }
+
+void main() => runApp(IThrowExceptionsWidget());

@@ -22,8 +22,13 @@ class DialogPage extends StatefulWidget {
 
 class _DialogPageState extends State<DialogPage> {
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
     Future.delayed(Duration.zero, () => showMyDialog(context));
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Center(
       child: Column(
         children: <Widget>[
@@ -44,4 +49,6 @@ class _DialogPageState extends State<DialogPage> {
   }
 }
 
-// Reference: https://stackoverflow.com/questions/52164369/
+void main() => runApp(SetStateCalledDuringBuildFix());
+
+// Reference: https://stackoverflow.com/a/52172201

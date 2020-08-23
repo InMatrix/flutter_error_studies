@@ -7,7 +7,7 @@ import 'package:flutter_error_studies/errors/setstate_called_during_build_error.
 import 'package:flutter_error_studies/errors/thrown_exception_error.dart';
 import 'package:flutter_error_studies/errors/unbounded_viewport_error.dart';
 
-import 'fixes/setstate_called_during_build_fix.dart';
+import 'fixes/setstate_called_during_build_error_fix2.dart';
 
 void main() => runApp(MyApp());
 
@@ -82,10 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
               Divider(),
               makeDemoEntry(
                 context,
-                'setState called during build',
+                'setState called during build - 1',
                 SetStateCalledDuringBuildError(),
                 SetStateCalledDuringBuildFix(),
-              )
+              ),
             ],
           ),
         ),
