@@ -5,7 +5,7 @@ import 'package:flutter_error_studies/errors/renderflex_overflow_error2.dart';
 import 'package:flutter_error_studies/errors/scaffold_context_error.dart';
 import 'package:flutter_error_studies/errors/setstate_called_during_build_error.dart';
 import 'package:flutter_error_studies/errors/thrown_exception_error.dart';
-import 'package:flutter_error_studies/errors/unbounded_viewport_error.dart';
+import 'package:flutter_error_studies/errors/unbounded_viewport_error_grid.dart';
 
 import 'fixes/setstate_called_during_build_error_fix4.dart';
 
